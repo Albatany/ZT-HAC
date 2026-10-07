@@ -1,0 +1,31 @@
+[package]
+name = "zt-hac"
+version = "0.1.0"
+description = "Zero-Trust Host Access Controller"
+edition = "2021"
+
+[lib]
+name = "zt_hac_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+aes-gcm = "0.10"
+argon2 = "0.5"
+getrandom = "0.2"
+sysinfo = { version = "0.30", default-features = false }
+notify = "6"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["processthreadsapi", "handleapi", "winnt"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

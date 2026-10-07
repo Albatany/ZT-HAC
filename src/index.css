@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { @apply bg-bg text-ink font-sans antialiased; margin: 0; overflow: hidden; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #232932; border-radius: 8px; }
+:focus-visible { outline: 2px solid #2dd4bf; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
