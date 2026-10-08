@@ -1,5 +1,7 @@
 # ZT-HAC: Zero-Trust Host Access Controller
 
+<img width="1920" height="1080" alt="screenshot_20261008_052259-region" src="https://github.com/user-attachments/assets/af9dc6f1-28eb-4d42-bda1-e11c31b9c76d" />
+
 A lightweight, offline-first desktop security utility for Linux and Windows. Built with Rust and Tauri, it uses the native OS webview to keep binary size and RAM usage low.
 
 ## Features
@@ -50,6 +52,5 @@ npx tauri icon path/to/logo.png
 - The Port Stopper needs elevated privileges: a polkit agent on Linux, or Administrator rights on Windows.
 - Build the Windows `.exe` on Windows or in CI.
 
-## License
+<img width="1002" height="629" alt="screenshot_20261008_052317-region" src="https://github.com/user-attachments/assets/885e9060-15a9-4bdf-aacd-2baa3257ef39" />
 
-Copyright Albatany 2026
